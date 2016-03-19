@@ -1,0 +1,15 @@
+{
+  "name": "harry",
+  "version": "1.0.0",
+  "description": "Checkout Concepts =========",
+  "main": "app.js",
+  "scripts": {
+    "test": "standard && node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "standard": "^6.0.8"
+  }
+}
