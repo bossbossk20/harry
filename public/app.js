@@ -2,6 +2,7 @@
 angular.module('app', [])
   .controller('TodoListController', function () {
     var app = this
+    app.test = 'koy'
     app.foodSelected = []
     app.price = 0
     app.addBook = function (img, title, price) {
