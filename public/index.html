@@ -24,13 +24,14 @@
 			</header>
 			<section class="content">
 				<div id="dummy-grid" class="dummy-grid">
-					<div class="dummy-grid__item" ng-click="app.addBook('h1.jpg','Harry Potter and the Philosopher Stone',40)"></div>
+					<!-- <div class="dummy-grid__item" ng-click="app.addBook('h1.jpg','Harry Potter and the Philosopher Stone',40)"></div>
 					<div class="dummy-grid__item" ng-click="app.addBook('h2.jpg','Harry Potter and the Chamber of Secrets',40)"></div>
 					<div class="dummy-grid__item" ng-click="app.addBook('h3.jpg','Harry Potter and the Prisoner of Azkaban',60)"></div>
 					<div class="dummy-grid__item" ng-click="app.addBook('h4.jpg','Harry Potter and the Goblet of Fire',60)"></div>
 			   	<div class="dummy-grid__item" ng-click="app.addBook('h5.jpg','Harry Potter and the Order of the Phoenix',60)"></div>
 					<div class="dummy-grid__item" ng-click="app.addBook('h6.jpg','Harry Potter and the Half-Blood Prince',60)"></div>
-					<div class="dummy-grid__item" ng-click="app.addBook('h7.jpg',' Harry Potter and the Deathly Hallows',60)"></div>
+					<div class="dummy-grid__item" ng-click="app.addBook('h7.jpg',' Harry Potter and the Deathly Hallows',60)"></div> -->
+					<img src="images/h1.jpg" alt="" /><button type="button" name="button">add</button>
 				</div>
 			</section>
 			<div class="dummy-fixed">
@@ -47,15 +48,15 @@
 								<thead>
 							        <tr><th>Item</th><th>Price</th><th>&nbsp;</th></tr>
 							    </thead>
-							    <tbody ng-repeat="food in app.foodSelected" >
-									<tr><td>{{food.title}} </td><td>{{food.price}}</td><td><button class="checkout__action" ng-click="app.delFood($index)"><i class="icon fa fa-trash"></i></button></td></tr>
+							    <tbody ng-repeat="book in app.bookSelected" >
+									<tr><td>{{book.title}} </td><td>{{book.price}}</td><td><button class="checkout__action" ng-click="app.delBook($index)"><i class="icon fa fa-trash"></i></button></td></tr>
 								</tbody>
 							</table><!-- /checkout__summary -->
 							<button class="checkout__close checkout__cancel"><i class="icon fa fa-fw fa-close"></i>Close</button>
 						</div><!-- /checkout__order-inner -->
 					</div><!-- /checkout__order -->
 				</div><!-- /checkout -->
-				<div class="checkout__count">{{app.foodSelected.length}}</div>
+				<div class="checkout__count">{{app.bookSelected.length}}</div>
 			</div>
 		</div><!-- /container -->
 		<script src="js/classie.js"></script>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" ng-app="app">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Book Store</title>
+		<meta name="description" content="Some simple ideas for enhancing the checkout process" />
+		<meta name="keywords" content="checkout, button, concept, animated, web design, inspiration" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/checkout-sidebar.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="app.js"></script>
+	</head>
+	<body class="color-3" ng-controller="TodoListController as app">
+
+		<div class="container">
+			<!-- <header class="codrops-header">
+				<h1>Book <span>Simple enhancements for the checkout process</span></h1>
+			</header> -->
+			<table  class="table">
+				<tr>
+					<td>
+						<table>
+							<tr>
+								<td class="cen">
+										<span class="name">เล่ม 1</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div ng-click="app.addBook('h1.jpg','Harry Potter เล่ม 1',100)"><img class="size" src="images/h1.jpg" alt="" /></div>
+								</td>
+							</tr>
+							<!-- <tr>
+								<td class="cen">
+									<div ng-click="app.addBook('h1.jpg','Harry Potter and the Philosopher Stone',100)"><img src="images/add.png" width="80px" height="auto" alt="" /></div>
+								</td>
+							</tr> -->
+						</table>
+					</td>
+					<td>
+						<table>
+							<tr>
+								<td class="cen">
+										<span class="name">เล่ม 2</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div  ng-click="app.addBook('h2.jpg','Harry Potter เล่ม 2',100)"><img class="size" src="images/h2.jpg" alt="" /></div>
+								</td>
+							</tr>
+							<!-- <tr>
+								<td class="cen">
+									<div  ng-click="app.addBook('h2.jpg','Harry Potter and the Chamber of Secrets',100)"><img src="images/add.png" width="80px" height="auto" alt="" /></div>
+								</td>
+							</tr> -->
+						</table>
+					</td>
+					<td>
+						<table>
+							<tr>
+								<td class="cen">
+										<span class="name">เล่ม 3</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div  ng-click="app.addBook('h3.jpg','Harry Potter เล่ม 3',100)"><img class="size" src="images/h3.jpg" alt="" /></div>
+								</td>
+							</tr>
+							<!-- <tr>
+								<td class="cen">
+									<div  ng-click="app.addBook('h3.jpg','Harry Potter and the Prisoner of Azkaban',100)"><img src="images/add.png" width="80px" height="auto" alt="" /></div>
+								</td>
+							</tr> -->
+						</table>
+					</td>
+					<td>
+						<table>
+							<tr>
+								<td class="cen">
+										<span class="name">เล่ม 4</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div  ng-click="app.addBook('h4.jpg','Harry Potter เล่ม 4',100)"><img class="size" src="images/h4.jpg" alt="" /></div>
+								</td>
+							</tr>
+							<!-- <tr>
+								<td class="cen">
+										<div  ng-click="app.addBook('h4.jpg','Harry Potter and the Goblet of Fire',100)"><img src="images/add.png" width="80px" height="auto" alt="" /></div>
+								</td>
+							</tr> -->
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table>
+							<tr>
+								<td class="cen">
+										<span class="name">เล่ม 5</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div  ng-click="app.addBook('h5.jpg','Harry Potter เล่ม 5',100)"><img class="size" src="images/h5.jpg" alt="" /></div>
+								</td>
+							</tr>
+							<!-- <tr>
+								<td class="cen">
+									<div  ng-click="app.addBook('h5.jpg','Harry Potter and the Order of the Phoenix',100)"><img src="images/add.png" width="80px" height="auto" alt="" /></div>
+								</td>
+							</tr> -->
+						</table>
+					</td>
+					<td>
+						<table>
+							<tr>
+								<td class="cen">
+										<span class="name">เล่ม 6</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div  ng-click="app.addBook('h6.jpg','Harry Potter เล่ม 6',100)"><img class="size" src="images/h6.jpg" alt="" /></div>
+								</td>
+							</tr>
+							<!-- <tr>
+								<td class="cen">
+									<div  ng-click="app.addBook('h6.jpg','Harry Potter and the Half-Blood Prince',100)"><img src="images/add.png" width="80px" height="auto" alt="" /></div>
+								</td>
+							</tr> -->
+						</table>
+					</td>
+					<td>
+						<table>
+							<tr>
+								<td class="cen">
+										<span class="name">เล่ม 7</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div  ng-click="app.addBook('h7.jpg',' Harry Potter เล่ม 7',100)"><img class="size" src="images/h7.jpg" alt="" /></div>
+								</td>
+							</tr>
+							<!-- <tr>
+								<td class="cen">
+										<div  ng-click="app.addBook('h7.jpg',' Harry Potter and the Deathly Hallows',100)"><img src="images/add.png" width="80px" height="auto" alt="" /></div>
+								</td>
+							</tr> -->
+						</table>
+					</td>
+
+				</tr>
+			</table>
+			<section class="content">
+						<div class="dummy-sidebar">
+							<div class="checkout checkout--active">
+								<a class="checkout__button" href="#">Checkout</a>
+								<div class="checkout__order">
+									<div class="checkout__order-inner">
+										<table class="checkout__summary">
+											<thead>
+										        <tr><th>Your Order</th><th>Price</th></tr>
+										    </thead>
+										    <tfoot>
+										        <tr><th colspan="2">Total <span class="checkout__total">{{app.price}} ฿</span></th></tr>
+										    </tfoot>
+										    <tbody ng-repeat = "book in app.bookSelected">
+												<tr><td><strong>{{book.title}}</strong></td><td>{{book.price}} ฿</td></tr>
+											</tbody>
+										</table><!-- /checkout__summary -->
+										<button class="checkout__option checkout__option--loud">Pay now</button>
+									</div><!-- /checkout__order-inner -->
+								</div><!-- /checkout__order -->
+							</div><!-- /checkout -->
+							<!-- <div class="dummy-sidebar__item"><span class="ch">sdfsdf</span></div>
+							<div class="dummy-sidebar__item"><span class="ch">asdsf</span></div>
+							<div class="dummy-sidebar__item"></div>
+							<div class="dummy-sidebar__item"></div>
+							<div class="dummy-sidebar__item"></div>
+							<div class="dummy-sidebar__item"></div>
+							<div class="dummy-sidebar__item"></div>
+							<div class="dummy-sidebar__item"></div> -->
+							<div class="dummy-sidebar__overlay"></div>
+						</div>
+						<div id="dummy-grid" class="dummy-grid">
+							<!-- <div class="dummy-grid__item" ng-click="app.addBook('h1.jpg','Harry Potter and the Philosopher Stone',40)"></div>
+							<div  ng-click="app.addBook('h2.jpg','Harry Potter and the Chamber of Secrets',40)"></div>
+							<div  ng-click="app.addBook('h3.jpg','Harry Potter and the Prisoner of Azkaban',60)"></div>
+							<div  ng-click="app.addBook('h4.jpg','Harry Potter and the Goblet of Fire',60)"></div>
+					   	<div  ng-click="app.addBook('h5.jpg','Harry Potter and the Order of the Phoenix',60)"></div>
+							<div  ng-click="app.addBook('h6.jpg','Harry Potter and the Half-Blood Prince',60)"></div>
+							<div  ng-click="app.addBook('h7.jpg',' Harry Potter and the Deathly Hallows',60)"></div> -->
+
+						</div>
+					</div><!-- /dummy-grid -->
+			</section>
+		</div><!-- /container -->
+		<!-- <script src="js/classie.js"></script> -->
+		<!-- <script>
+			(function() {
+				[].slice.call( document.querySelectorAll( '.checkout' ) ).forEach( function( el ) {
+					var openCtrl = el.querySelector( '.checkout__button' ),
+						closeCtrls = el.querySelectorAll( '.checkout__cancel' );
+
+					openCtrl.addEventListener( 'click', function(ev) {
+						ev.preventDefault();
+						classie.add( el, 'checkout--active' );
+					} );
+
+					[].slice.call( closeCtrls ).forEach( function( ctrl ) {
+						ctrl.addEventListener( 'click', function() {
+							classie.remove( el, 'checkout--active' );
+						} );
+					} );
+				} );
+			})();
+		</script> -->
+	</body>
+</html>

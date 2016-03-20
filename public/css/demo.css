@@ -14,7 +14,9 @@
 *, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
 .clearfix:before, .clearfix:after { content: ''; display: table; }
 .clearfix:after { clear: both; }
-
+.ch{
+	float: left;
+}
 body {
 	background: #fff;
 	color: #606871;
@@ -77,6 +79,7 @@ a:hover, a:focus,
 	font-weight: 800;
 	font-size: 3em;
 	line-height: 1;
+	margin-left:-533px;
 }
 
 .codrops-header h1 span {
@@ -199,7 +202,7 @@ a:hover, a:focus,
 	top: 0;
 	right: 0;
 	padding: 2.5em;
-	width: 300px;
+	width: 500px;
 	height: 100%;
 }
 
@@ -215,6 +218,7 @@ a:hover, a:focus,
 	display: flex;
 	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
+	margin-top: -60px;
 }
 
 .dummy-grid--filled {
@@ -260,6 +264,7 @@ a:hover, a:focus,
 	-webkit-transition: opacity 0.3s;
 	transition: opacity 0.3s;
 	pointer-events: none;
+
 }
 
 .checkout--active + .dummy-grid::after {
@@ -277,7 +282,7 @@ a:hover, a:focus,
 .dummy-grid--highlight .dummy-grid__item:first-child::before,
 .dummy-grid--highlight .dummy-grid__item:nth-child(4)::before,
 .dummy-grid--highlight .dummy-grid__item:nth-child(7)::before {
-	
+
 
 
 }
@@ -292,17 +297,19 @@ a:hover, a:focus,
 
 .dummy-grid__item::before {
 	top: 0;
-	height: 70%;
+	height: 220px;
 	background: rgba(181, 183, 188, 0.3);
 	-webkit-transition: background 0.5s;
 	transition: background 0.5s;
+	margin-top: 70px;
 }
 
 .dummy-grid__item::after {
 	top: 80%;
 	height: 15%;
-	border-top: 10px solid rgba(181, 183, 188, 0.3);
+
 	border-bottom: 10px solid rgba(181, 183, 188, 0.3);
+	margin-top: 100px;
 }
 
 .dummy-fixed {

@@ -3,19 +3,19 @@ angular.module('app', [])
   .controller('TodoListController', function () {
     var app = this
     app.test = 'koy'
-    app.foodSelected = []
+    app.bookSelected = []
     app.price = 0
     app.addBook = function (img, title, price) {
-      var jsonFood = {
+      var jsonBook = {
         'img': img,
         'title': title,
         'price': price
       }
-      app.foodSelected.push(jsonFood)
+      app.bookSelected.push(jsonBook)
       app.price += price
-      console.log(app.price)
+      console.log(app.price, title)
     }
-    app.delFood = function (index) {
-      app.foodSelected.splice(index, 1)
+    app.delBook = function (index) {
+      app.bookSelected.splice(index, 1)
     }
   })
