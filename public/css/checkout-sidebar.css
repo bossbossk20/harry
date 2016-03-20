@@ -176,17 +176,3 @@ a.checkout__button:focus {
     font-weight: bold;
     font-size: 1.15em;
 }
-
-.checkout__option--loud:hover {
-    background: #8d93b6;
-}
-
-.checkout__option--silent {
-    margin-right: 0.5em;
-    color: #797678;
-    font-size: 0.85em;
-}
-
-.checkout__option--silent:hover {
-    color: #8d93b6;
-}
