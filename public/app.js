@@ -4,15 +4,41 @@ angular.module('app', [])
     var app = this
     app.price = 0
     app.bookSelected = []
+    app.backupBook = []
+    app.dub = []
     app.minQty = 0
     app.discountTotal = 0
     app.total = 0
+    app.temp = 0
     app.addBook = function (no, title, price) {
       var jsonBook = {
         'no': no,
         'title': title,
         'price': price
       }
+      // app.backupBook.push(jsonBook.no)
+      // var sorted_arr = app.backupBook.slice().sort()
+      // var results = []
+      // for (var i = 0; i < app.backupBook.length - 1; i++) {
+      //   if (sorted_arr[i + 1] === sorted_arr[i]) {
+      //     results.push(sorted_arr[i])
+      //   }
+      // }
+      // for (var j = 0; j < app.backupBook.length; j++) {
+      //   for (var k = 0; k < results.length; k++) {
+      //     if (app.backupBook.length !== 0) {
+      //       if (app.backupBook[j] === results[k]) {
+      //         app.temp = j
+      //         // app.backupBook.splice(app.temp, 1)
+      //         console.log('backupBook :', app.temp, ' dup :', k)
+      //       }
+      //     }
+      //   }
+      // }
+      // console.log('temp', app.temp)
+      // console.log(app.backupBook)
+      // console.log(results)
+      // app.backupBook.sort(function (a, b) { return a - b })
       if (app.bookSelected.length === 0) {
         jsonBook.qty = 1
         app.bookSelected.push(jsonBook)

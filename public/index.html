@@ -32,7 +32,7 @@
 							</tr>
 							<tr>
 								<td>
-									<div ng-click="app.addBook(1,'Harry Potter เล่ม 1',100)"><img class="size" src="images/h1.jpg" alt="" /></div>
+									<div id="b1" ng-click="app.addBook(1,'Harry Potter เล่ม 1',100)"><img class="size" src="images/h1.jpg" alt="" /></div>
 								</td>
 							</tr>
 							<!-- <tr>
@@ -51,7 +51,7 @@
 							</tr>
 							<tr>
 								<td>
-									<div  ng-click="app.addBook(2,'Harry Potter เล่ม 2',100)"><img class="size" src="images/h2.jpg" alt="" /></div>
+									<div id="b2" ng-click="app.addBook(2,'Harry Potter เล่ม 2',100)"><img class="size" src="images/h2.jpg" alt="" /></div>
 								</td>
 							</tr>
 							<!-- <tr>
@@ -70,7 +70,7 @@
 							</tr>
 							<tr>
 								<td>
-									<div  ng-click="app.addBook(3,'Harry Potter เล่ม 3',100)"><img class="size" src="images/h3.jpg" alt="" /></div>
+									<div  id="b3" ng-click="app.addBook(3,'Harry Potter เล่ม 3',100)"><img class="size" src="images/h3.jpg" alt="" /></div>
 								</td>
 							</tr>
 							<!-- <tr>
@@ -89,7 +89,7 @@
 							</tr>
 							<tr>
 								<td>
-									<div  ng-click="app.addBook(4,'Harry Potter เล่ม 4',100)"><img class="size" src="images/h4.jpg" alt="" /></div>
+									<div id="b4" ng-click="app.addBook(4,'Harry Potter เล่ม 4',100)"><img class="size" src="images/h4.jpg" alt="" /></div>
 								</td>
 							</tr>
 							<!-- <tr>
@@ -110,7 +110,7 @@
 							</tr>
 							<tr>
 								<td>
-									<div  ng-click="app.addBook(5,'Harry Potter เล่ม 5',100)"><img class="size" src="images/h5.jpg" alt="" /></div>
+									<div id="b5" ng-click="app.addBook(5,'Harry Potter เล่ม 5',100)"><img class="size" src="images/h5.jpg" alt="" /></div>
 								</td>
 							</tr>
 							<!-- <tr>
@@ -129,7 +129,7 @@
 							</tr>
 							<tr>
 								<td>
-									<div  ng-click="app.addBook(6,'Harry Potter เล่ม 6',100)"><img class="size" src="images/h6.jpg" alt="" /></div>
+									<div id="b6" ng-click="app.addBook(6,'Harry Potter เล่ม 6',100)"><img class="size" src="images/h6.jpg" alt="" /></div>
 								</td>
 							</tr>
 							<!-- <tr>
@@ -148,7 +148,7 @@
 							</tr>
 							<tr>
 								<td>
-									<div  ng-click="app.addBook(7,' Harry Potter เล่ม 7',100)"><img class="size" src="images/h7.jpg" alt="" /></div>
+									<div id="b7" ng-click="app.addBook(7,' Harry Potter เล่ม 7',100)"><img class="size" src="images/h7.jpg" alt="" /></div>
 								</td>
 							</tr>
 							<!-- <tr>
@@ -172,9 +172,9 @@
 										        <tr><th>Your Order</th> <th>Qty</th> <th>Price</th></tr>
 										    </thead>
 										    <tfoot>
-										        <tr><th></th> <th colspan="2">Sum of Price <span class="checkout__total">{{app.price}} ฿</span></th></tr>
-														<tr><th></th> <th colspan="2">Discount <span class="checkout__total">{{app.discountTotal}} ฿</span></th></tr>
-														<tr><th></th> <th colspan="2">Total <span class="checkout__total">{{app.total}} ฿</span></th></tr>
+										        <tr><th></th> <th colspan="2">Sum of Price <span class="checkout__total" id="priceTotal">฿ {{app.price}}</span></th></tr>
+														<tr><th></th> <th colspan="2">Discount <span class="checkout__total" id="discountTotal">฿ {{app.discountTotal}}</span></th></tr>
+														<tr><th></th> <th colspan="2">Total <span class="checkout__total" id="total">฿ {{app.total}}</span></th></tr>
 										    </tfoot>
 										    <tbody ng-repeat = "book in app.bookSelected">
 												<tr><td><strong>{{book.title}}</strong></td><td>{{book.qty}}</td> <td>{{book.qty*book.price}} ฿</td></tr>
