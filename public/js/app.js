@@ -1,7 +1,9 @@
-/* global angular */
+/* global angular, cart */
 angular.module('app', [])
   .controller('TodoListController', function () {
     var app = this
+    var grid = document.getElementById('goods')
+    app.test = 'koy'
     app.price = 0
     app.bookSelected = []
     app.backupBook = []
@@ -10,12 +12,16 @@ angular.module('app', [])
     app.discountTotal = 0
     app.total = 0
     app.temp = 0
+
     app.addBook = function (no, title, price) {
       var jsonBook = {
         'no': no,
         'title': title,
         'price': price
       }
+      grid.style.transform = 'translate(-200px, 0)'
+      cart.style.transform = 'translate(0px, 0)'
+      console.log(app.bookSelected)
       if (app.bookSelected.length === 0) {
         jsonBook.qty = 1
         app.bookSelected.push(jsonBook)
