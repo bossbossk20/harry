@@ -12,7 +12,7 @@
 		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="css/checkout-sidebar.css" />
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="js/angular.min.js"></script>
 		<script src="app.js"></script>
 	</head>
 	<body class="color-3" ng-controller="TodoListController as app">
@@ -174,7 +174,7 @@
 										    <tfoot>
 										        <tr><th></th> <th colspan="2">Sum of Price <span class="checkout__total" id="priceTotal">฿ {{app.price}}</span></th></tr>
 														<tr><th></th> <th colspan="2">Discount <span class="checkout__total" id="discountTotal">฿ {{app.discountTotal}}</span></th></tr>
-														<tr><th></th> <th colspan="2">Total <span class="checkout__total" id="total">฿ {{app.total}}</span></th></tr>
+														<tr><th></th> <th colspan="2">Total <span class="checkout__total" id="total">฿ {{app.price - app.discountTotal}}</span></th></tr>
 										    </tfoot>
 										    <tbody ng-repeat = "book in app.bookSelected">
 												<tr><td><strong>{{book.title}}</strong></td><td>{{book.qty}}</td> <td>{{book.qty*book.price}} ฿</td></tr>

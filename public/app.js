@@ -16,29 +16,6 @@ angular.module('app', [])
         'title': title,
         'price': price
       }
-      // app.backupBook.push(jsonBook.no)
-      // var sorted_arr = app.backupBook.slice().sort()
-      // var results = []
-      // for (var i = 0; i < app.backupBook.length - 1; i++) {
-      //   if (sorted_arr[i + 1] === sorted_arr[i]) {
-      //     results.push(sorted_arr[i])
-      //   }
-      // }
-      // for (var j = 0; j < app.backupBook.length; j++) {
-      //   for (var k = 0; k < results.length; k++) {
-      //     if (app.backupBook.length !== 0) {
-      //       if (app.backupBook[j] === results[k]) {
-      //         app.temp = j
-      //         // app.backupBook.splice(app.temp, 1)
-      //         console.log('backupBook :', app.temp, ' dup :', k)
-      //       }
-      //     }
-      //   }
-      // }
-      // console.log('temp', app.temp)
-      // console.log(app.backupBook)
-      // console.log(results)
-      // app.backupBook.sort(function (a, b) { return a - b })
       if (app.bookSelected.length === 0) {
         jsonBook.qty = 1
         app.bookSelected.push(jsonBook)
@@ -55,10 +32,15 @@ angular.module('app', [])
         jsonBook.qty = 1
         app.bookSelected.push(jsonBook)
       }
+      for (var v = 0; v < app.backupBook.length; v++) {
+        app.backupBook[v].qty -= 1
+        if (app.backupBook[v].qty === 0) {
+          app.backupBook.splice(v, 1)
+        }
+      }
       app.price = app.sumPrice()
-      app.minQty = app.findMinQty()
-      app.discountTotal = app.discount()
-      app.total = app.sumPrice() - app.discount()
+      var book = app.bookSelected
+      app.discountTotal = app.discount(book)
     }
     app.sumPrice = function () {
       this.sumQty = 0
@@ -77,10 +59,35 @@ angular.module('app', [])
       }
       return this.min
     }
-    app.discount = function () {
-      return (app.bookSelected.length * ((app.bookSelected.length - 1) * 10) * app.minQty)
+    app.findMaxQty = function () {
+      this.max = app.bookSelected[0].qty
+      for (var i = 0; i < app.bookSelected.length; i++) {
+        if (app.bookSelected[i].qty > this.max) {
+          this.max = app.bookSelected[i].qty
+        }
+      }
+      return this.max
     }
     app.delBook = function (index) {
       app.bookSelected.splice(index, 1)
+    }
+    var filterData = function (array) {
+      return array.filter((element) => element.qty !== 0)
+    }
+    app.discount = function (book) {
+      var items = book.map((obj) => {
+        return { qty: obj.qty, price: obj.price }
+      })
+      var totalDis = 0
+      while (items.length > 1) {
+        var sumprice = items.reduce((sum, item) => sum + item.price, 0)
+        totalDis += ((items.length - 1) / 10) * sumprice
+        items = items.map((obj) => {
+          return { qty: obj.qty - 1, price: obj.price }
+        })
+        items = filterData(items)
+      }
+      console.log(totalDis)
+      return totalDis
     }
   })
