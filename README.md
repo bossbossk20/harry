@@ -10,6 +10,7 @@ $ sudo npm install
 $ sudo npm start
 ```
 ### how to test
+#### should start server berfore run test
 ```
 $ sudo npm test
 ```
