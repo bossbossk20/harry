@@ -3,13 +3,13 @@
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 ### how to install
 ```
-$ npm install
+$ sudo npm install
 ```
 ### how to start server
 ```
-$ npm start
+$ sudo npm start
 ```
 ### how to test
 ```
-$ npm test
+$ sudo npm test
 ```
