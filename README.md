@@ -5,11 +5,11 @@
 ```
 $ npm install
 ```
-### how to test
-```
-$ npm test
-```
 ### how to start server
 ```
 $ npm start
+```
+### how to test
+```
+$ npm test
 ```
