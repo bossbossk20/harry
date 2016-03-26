@@ -12,7 +12,6 @@ angular.module('app', [])
     app.discountTotal = 0
     app.total = 0
     app.temp = 0
-
     app.addBook = function (no, title, price) {
       var jsonBook = {
         'no': no,

@@ -4,7 +4,7 @@
   "license": "MIT",
   "main": "lib/nightmare.js",
   "scripts": {
-    "test": "standard && make test",
+    "test": "make test",
     "start": "node index.js"
   },
   "repository": {
