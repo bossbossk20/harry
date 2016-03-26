@@ -101,16 +101,15 @@
   <br>
   <table width="100%">
     <tr>
-      <td class="hOrder"><span >Order<br></span></td><td align="center"><span class="h">Qty<br></span></td><td align="right" style="padding-right:24px"><span class="hPrice">Price<br></span></td>
+      <td class="hOrder"><span >Order<br></span></td><td align="center"><span class="h">Qty<br></span></td><td align="right" style="padding-right:24px"><span class="hPrice">Price<br></span>
+
+      </td>
     </tr>
     <tr class="yak" ng-repeat = "book in app.bookSelected">
       <td class="tOrder"><span class="">{{book.title}}</span></td><td align="center"><span class="">{{book.qty}}</span></td><td align="right" style="padding-right:24px"><span class="tPrice">{{book.qty*book.price}}</span></td>
     </tr>
   </table>
-
-
   <!-- <div id="all">
-
   </div> -->
   <div class="total">
     <h2>Sum of Price</h2>

@@ -27,8 +27,8 @@ describe('TEST Buy Harry Potter Book', function () {
     })
     it('ซื้อเล่ม 1 จำนวน 2 เล่ม, ซื้อเล่ม 2 จำนวน 1 เล่ม ส่วนลดต้องเท่ากับ 20', function * () {
       var case1 = yield nightmare
-        .goto('http://localhost:5000')
-        .wait(2000)
+        .goto('https://hidden-hollows-96098.herokuapp.com')
+        .wait(4000)
         .click('#b1')
         .click('#b1')
         .wait(1000)
@@ -41,7 +41,7 @@ describe('TEST Buy Harry Potter Book', function () {
     })
     it('ซื้อเล่ม 2 จำนวน 3 เล่ม, ซื้อเล่ม 3 จำนวน 3 เล่ม ส่วนลดต้องเท่ากับ 60', function * () {
       var case2 = yield nightmare
-        .goto('http://localhost:5000')
+        .goto('https://hidden-hollows-96098.herokuapp.com')
         .wait(2000)
         .click('#b2')
         .click('#b2')
@@ -59,7 +59,7 @@ describe('TEST Buy Harry Potter Book', function () {
     })
     it('ซื้อเล่ม 3 จำนวน 5 เล่ม, ซื้อเล่ม 4 จำนวน 4 เล่ม, เล่ม 5 จำนวน 3 ส่วนลดต้องเท่ากับ 200', function * () {
       var case3 = yield nightmare
-        .goto('http://localhost:5000')
+        .goto('https://hidden-hollows-96098.herokuapp.com')
         .wait(2000)
         .click('#b3')
         .click('#b3')
@@ -83,7 +83,7 @@ describe('TEST Buy Harry Potter Book', function () {
     })
     it('ซื้อเล่ม 6 จำนวน 5 เล่ม, ซื้อเล่ม 7 จำนวน 4 เล่ม, ซื้อเล่ม 2 จำนวน 2 เล่ม, ซื้อเล่ม 3 จำนวน 1 เล่ม ส่วนลดต้องเท่ากับ 200', function * () {
       var case4 = yield nightmare
-        .goto('http://localhost:5000')
+        .goto('https://hidden-hollows-96098.herokuapp.com')
         .wait(2000)
         .click('#b6')
         .click('#b6')
